@@ -1,0 +1,13 @@
+{% extends "./base.html" %}
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block content %}
+    <form role="form" action="{% url 'player_signup' %}" method="post">
+        {% csrf_token %}
+        <p>Please Fill in the below to create an account.</p><br>
+        {{ form }} <br>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+{% endblock %}
